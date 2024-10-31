@@ -133,6 +133,7 @@ class AplikasiKontak {
             System.out.println("2. Hapus Kontak");
             System.out.println("3. Daftar Kontak");
             System.out.println("4. Keluar");
+            System.out.println("6 . Keluar");
             String pilihan = scanner.nextLine();
 
             switch (pilihan) {
