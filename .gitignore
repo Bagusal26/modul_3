@@ -1,0 +1,37 @@
+class ContactInfo {
+    private String phone; // Encapsulated field
+    private String email; // Encapsulated field
+
+    public ContactInfo(String phone, String email) {
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public void display() { // Extra method
+        System.out.println("Phone: " + phone);
+        System.out.println("Email: " + email);
+    }
+}
+
+class Student {
+    private String name;
+    private ContactInfo contactInfo; // Move class
+
+    public Student(String name, String phone, String email) {
+        this.name = name;
+        this.contactInfo = new ContactInfo(phone, email);
+    }
+
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        contactInfo.display(); // Menggunakan extra method
+    }
+}
+
+// Penggunaan
+public class Main {
+    public static void main(String[] args) {
+        Student student1 = new Student("Alice", "123-456-7890", "alice@example.com");
+        student1.displayInfo();
+    }
+}
